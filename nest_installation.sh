@@ -6,13 +6,13 @@ mkdir nest-2.8.0-build
 
 cd nest-2.8.0-build
 
-export PATH=$PATH:~/nest_server_codes/opt/nest/bin
-export PYTHONPATH=~/nest_server_codes/opt/nest/lib/python2.7/site-packages:$PYTHONPATH
+export PATH=$PATH:/home/ubuntu/nest_server_codes/opt/nest/bin
+export PYTHONPATH=/home/ubuntu/nest_server_codes/opt/nest/lib/python2.7/site-packages:$PYTHONPATH
 
-../nest-2.8.0/configure --prefix=/home/jgornet/opt/nest
+../nest-2.8.0/configure --prefix=/home/ubuntu/nest_server_codes/opt/nest
 
-export PATH=$PATH:~/nest_server_codes/opt/nest/bin
-export PYTHONPATH=~/nest_server_codes/opt/nest/lib/python2.7/site-packages:$PYTHONPATH
+export PATH=$PATH:/home/ubuntu//nest_server_codes/opt/nest/bin
+export PYTHONPATH=/home/ubuntu//nest_server_codes/opt/nest/lib/python2.7/site-packages:$PYTHONPATH
 
 make 
 make install
