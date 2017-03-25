@@ -1,0 +1,9 @@
+Name: length_s - counts elements of a string
+ Synopsis: string length -> int
+
+ Examples:
+   (Hello world!)      length --> 12
+ Author: docu by Sirko Straube
+ Remarks: Use length if you are not sure of the data type.
+ SeeAlso: length
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slidata.cc

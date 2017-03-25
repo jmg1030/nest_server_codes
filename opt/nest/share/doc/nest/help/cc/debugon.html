@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: debugon</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: debugon</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> debugon - Start SLI level debugger.
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+The SLI Debug mode allows you to debug SLI programs by tracing
+the execution of the individual commands.
+
+In debug mode, each SLI instruction is stepped individually. After
+each instruction, the user can see the next command, the contents of
+the stack, the entire procedure being executed.
+
+It is also possible to set a breakpoint, so that variables and stacks
+in the procedure context can be examined and modified.
+
+
+The debug mode is controled by the debug level. Whenever execution
+enters a procedure or loop, the debug level is increased.
+If the procedure is left, the debug level is decreased.
+The user can specify a max debug level, beyond which the debug mode
+is suspended.
+This way, the user can skip over functions which are beyond a certain
+level.
+
+The following commands are available:
+
+  next        - Trace (execute) next command.
+  continue    - Continue this level without debugging
+  step        - Step over deeper levels.
+  list        - list current procedure or loop.
+  where       - show backtrace of execution stack.
+  stack       - show operand stack.
+  estack      - show execution stack.
+  edit        - enter interactive mode.
+  stop        - raise an exception.
+  help        - display this list.
+  quit        - quit debug mode.
+  show next   - show next command.
+  show stack  - show operand stack.
+  show backtrace- same as 'where'.
+  show estack - show execution stack.
+  toggle stack     - toggle stack display.
+  toggle catch     - toggle debug on error.
+  toggle backtrace - toggle stack backtrace on error.
+  toggle tailrecursion - toggle tail-recursion optimisation.
+
+Note: This mode is still experimental.
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/debugoff.html"><tt>debugoff</tt></a>  <a href="../cc/debug.html"><tt>debug</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: Part</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: Part</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> Part - returns a sub-array of an array
+</pre></td></tr>  <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> array1 array2 Part -> array3
+</pre></td></tr>  <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+   Part returns a sub-array of array1 specified by
+   array2. This function is an implementation of
+   Mathematica's Part function. It can also be used
+   to rearrange or copy parts of array1. Note,
+   Mathematica-style functions in SLI use Mathematica
+   index notation.
+</pre></td></tr>  <tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre>
+   array1 is an arbitrarily shaped array. In particular
+   it does not need to be rectangular.
+
+   array2 is an array [i,j, ...] where the i,j specify the
+   selected elements on each level. Any i,j can itself be
+   an array [i1,i2,....] specifying a list of elements on
+   that level. When i is the literal /All, all elements on
+   the corresponding level are returned. The first element
+   on each level has index 1. Indices can also be specified
+   counting from the end of the array, in this case the last
+   element has index -1. Positive and neative indices can
+   arbitrarily be intermixed.
+
+   Alternatives: Function Part_a (undocumented) -> behaviour and
+   synopsis are the same.
+
+</pre></td></tr>  <tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre>
+
+
+   [ [3 5 6 9] [11 4 7 2] [-9 1 8 10] ]  [ [1 3] [2 3] ] Part  --> [[5 6] [1 8]]
+   [ [3 [-12 -19] 6 9] [11 4 7 2] [-9 1 8 10] ]  [ 1 2 2] Part --> -19  
+   [3 4 5 6 7] [-2] Part                                   --> 6 
+   [3 [-9 -12] 5 6 7] [2] Part                             --> [-9 -12]
+   [3 [-9 -12] 5 6 7] [2 2] Part                           --> -12
+   [3 [-9 -12] 5 6 7] [[2 3]] Part                         --> [[-9 -12] 5] 
+   [3 [-9 -12] 5 6 7] [[2 3 2]] Part                       --> [[-9 -12] 5 [-9 -12]]
+   [ [3 5 6 9] [11 4 7 2] [-9 1 8 10] ]  [ 1 []  ] Part    --> [] 
+   [ [3 5 6 9] [11 4 7 2] [-9 1 8 10] ]  [ [] 1 ] Part     --> [] 
+   [3 [5 -12] 6 9]  [ [ 2 ] ] Part                         --> [[5 -12]] 
+   [3 [5 -12] 6 9]  [ [ 2 ] 2] Part                        --> [-12] 
+   [ [3 5 6 9] [11 4 7 2] [-9 1 8 10] ]  [ /All [3 2]  ] Part --> [[6 5] [7 4] [8 1]]
+
+</pre></td></tr>  <tr><td valign="top"><b>Bugs:</b></td><td valign="top"><pre>
+</pre></td></tr>  <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Diesmann
+</pre></td></tr>  <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> 29.9.1999
+
+</pre></td></tr>  <tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre>
+   Literal /All plays the role of the index specifier ':'
+   in Matlab when used without arguments. Note, that
+   Matlab in addition provides specifier 'end'.
+   This is not necessary in the formalism of Mathematica
+   because indices counting from the end of the array can be
+   expressed by negative values.
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/MathematicaToSliIndex.html"><tt>MathematicaToSliIndex</tt></a>  </td></tr>
+</pre></td></tr>  <tr><td valign="top"><b>References:</b></td><td valign="top"><pre>
+   [1] The Mathematica Book V4.0 "Part"
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Name: testsuite::ticket-785 - fail_or_die inconsistenly reports errors
+
+Synopsis: (ticket-785) run -> NEST exits if test fails
+
+Description:
+Test that fail_or_die reports errors consistently. There are two calls to fail_or_die. The first one passes, the second one fails to pass.
+
+Author: Marc-Oliver Gewaltig, 2013-12-25
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/regressiontests/ticket-785.sli

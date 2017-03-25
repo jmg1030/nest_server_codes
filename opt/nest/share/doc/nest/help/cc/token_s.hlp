@@ -1,0 +1,6 @@
+Name: token_s - read a token from a string
+Synopsis:  string token_s -> post any true
+                            false
+References: The Red Book
+SeeAlso: token
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc

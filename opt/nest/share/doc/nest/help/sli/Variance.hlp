@@ -1,0 +1,18 @@
+Name: Variance - returns the variance of the elements of an array
+Synopsis:
+ array Variance -> double, unbiased estimate of variance of elements
+Parameters:
+ array
+Description:
+ The function is implemented in SLI using Mean and Total
+Examples:
+ [8 4 3 6 9 5] Variance --> 5.366
+Remarks:
+ The Mathematica version is more general.
+ Replaces arr::Var in future versions.
+Author: Diesmann
+FirstVersion: 2009.2.22
+References:
+   [1] The Mathematica Book "Variance"
+SeeAlso: Max, Sort, Total, Mean, StandardDeviation
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

@@ -1,0 +1,3 @@
+Name: static_synapse_hom_w_hpc - Variant of static_synapse_hom_w with low memory consumption.
+     SeeAlso: synapsedict, static_synapse_hom_w, static_synapse_hpc
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/models/modelsmodule.cpp

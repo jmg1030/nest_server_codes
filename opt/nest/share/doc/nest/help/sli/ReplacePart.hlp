@@ -1,0 +1,29 @@
+Name: ReplacePart - replaces particular elements of an array
+Synopsis: array1 any integer ReplacePart -> array3
+          array1 any array2  ReplacePart
+Description:
+ Replaces the elements of array1 specified by the integer or
+ by array2 with the 2nd argument any and returns the resulting
+ array.
+Parameters:
+ The integer specifies a position in array1. array2 specifies a
+ multi-dimensional position [i, j,...] in array1 or a list of
+ positions [ [i1,j1,...], [i2,j2,...], ...].
+Examples:
+ [3, {-11, 5}, {9}, 7] 4 2 ReplacePart
+  -> [3 4 [9] 7]
+ [3 [-11 5] [9] 7] 4 [2 1] ReplacePart
+  -> [3 [4 5] [9] 7]
+ [3 [-11 5] [9] 7] 4 [[2] [4]] ReplacePart
+  -> [3 4 [9] 4]
+ [3 [-11 5] [9] 7] 4 [[2 1] [3 1]] ReplacePart
+  -> [3 [4 5] [4] 7]
+
+Author: Diesmann
+FirstVersion: 2007.11.28
+Remarks:
+ The variant of this function with four arguments is not implemented
+SeeAlso: MapAt, ReplaceOccurrences, Part
+References:
+   [1] The Mathematica Book V4.0 "Part"
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: usertime</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: usertime</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> usertime - returns usertime for current process 
+</pre></td></tr> <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre>  usertime -> utime
+</pre></td></tr> <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre> 
+ Calls the POSIX times() function to obtain usertime for the current
+ process in seconds.  The value might not be meaningful if more than
+ one thread is used.
+
+</pre></td></tr> <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Hans Ekkehard Plesser
+</pre></td></tr> <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> 2003-07-29
+</pre></td></tr> <tr><td valign="top"><b>References:</b></td><td valign="top"><pre> man 2 times
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/ptimes.html"><tt>ptimes</tt></a>  <a href="../sli/realtime.html"><tt>realtime</tt></a>  <a href="../sli/systemtime.html"><tt>systemtime</tt></a>  <a href="../sli/tic.html"><tt>tic</tt></a>  <a href="../sli/toc.html"><tt>toc</tt></a>  <a href="../cc/pclockspersec.html"><tt>pclockspersec</tt></a>  <a href="../cc/pclocks.html"><tt>pclocks</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

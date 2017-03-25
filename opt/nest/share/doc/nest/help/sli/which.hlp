@@ -1,0 +1,34 @@
+Name: which - Display the name of a command's source file.
+
+Synopsis: /command which -> 
+
+Description:
+"which" displays the name of the file containing the documentation
+header for /command. This is most likely the location, where the
+command was defined.
+
+Parameters:
+/command - commandname, as listed by "helpindex", including a
+           possible namespace prefix (see examples)
+
+Examples:
+ /which which
+ -> Source: /home/kupper/nest2/lib/sli/helpinit.sli
+
+ /MemoryInfo which
+ -> Source: /home/kupper/nest2/nestkernel/nestmodule.cpp
+
+ /unittest::pass_or_die which
+ -> Source: /home/kupper/nest2/lib/sli/unittest.sli
+
+Diagnostics:
+Raises /NoHelpInformationError if the command is undocumented.
+
+Author: R Kupper
+
+FirstVersion: 23-jul-2008
+
+Availability: Standard SLI
+
+SeeAlso: helpindex, help, apropos
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/helpinit.sli

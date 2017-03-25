@@ -1,0 +1,20 @@
+Name: length - counts elements of a container object
+ Synopsis: proc/literal/array/string/dict length -> int
+ Description:
+   length counts type-dependent elements, e.g. characters of a string,
+   entries of a dictonary, number of command of a procedure.
+
+   Alternatives: Functions length_p, length_lp, length_a, length_s, 
+   length_d (documented:SeeAlso) 
+
+ Parameters: 
+   One of the types proc, literal, array, string, dict
+   Returns integer with number of elements.
+ Examples: 
+   (Hello world!)      length --> 12
+   {(Hello world!) ==} length --> 2
+ Bugs: 
+ Author: Gewaltig, Diesmann
+ FirstVersion: ??
+ SeeAlso: length_p, length_lp, length_a, length_s, length_d, capacity, size
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

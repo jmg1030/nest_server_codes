@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: message</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: message</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> message - Display an information message
+
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre>
+(Message) Priority        message -> -
+Priority (From) (Message) message ->
+
+where "Priority" may be any positive integer, or one of the following:
+M_DEBUG, M_STATUS, M_INFO, M_WARNING, M_ERROR, M_FATAL
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre> 
+Display a message, if priority is higher than current verbosity-level. 
+message uses the message mechanism which is provided
+by the SLIInterpreter class.
+
+The output consists of a time-stamp (date and time), the name of the
+calling function, the priority level and the message text.
+
+
+% month dd hh:mm::ss from[pl] messagetext
+
+Where
+   month - abbreviated month (Jan-Dec)
+   dd    - day in month (01-31)
+   hh    - hour (00-23)
+   mm    - minute (00-61)
+   ss    - seconds (00-61)
+   from  - name of the caller, defaults to (SLI) in the short form
+   pl    - priority level of the message
+   
+The time-stamp is useful during long-running simulations.  
+
+All output is sent to the stream defined in M_OUT which is
+set to cout by default.
+
+The verbosity level can be controlled by the functions
+verbosity and setverbosity. For compatibility, the function
+shutupto is still supported as alias to setverbosity.
+
+</pre></td></tr><tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre> 
+In : (MyMessage: Message to display
+     Priority  : Priority level of message (integer).
+Opt: (From)    : Name of the caller of class of message.
+
+</pre></td></tr><tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre> Short form:
+          1. (Still alive) M_DEBUG message
+              issues something like
+          % Jul 21 16:23:12 SLI[5] Still alive  
+
+          1. (Something happened) M_STATUS message
+              issues something like
+          % Jul 21 16:23:12 SLI[5] Still alive  
+
+          3. (Your last action had no effect) M_INFO message
+              issues something like
+          % Jul 21 16:24:12 SLI[10] Your last action had no effect 
+
+          4. (Result may be invalid) M_WARNING message
+              issues something like
+          % Jul 21 16:24:24 SLI[20] Result may be invalid  
+
+          5. (This should never happen!) M_ERROR message
+              issues something like
+          % Jul 21 16:24:36 SLI[30] This should never happen!
+
+          6. (It's all broken, let's go home.) M_FATAL message
+              issues something like
+          % Jul 21 16:24:36 SLI[40] It's all broken, let's go home.
+
+ Long form:
+          1. M_DEBUG (DEBUGMESSAGE) (This should never happen!) message
+              issues something like
+          % Jul 21 16:24:36 DEBUGMESSAGE[30] This should never happen!
+            
+ Depending on the verbosity-level, the output may be suppressed.
+
+</pre></td></tr><tr><td valign="top"><b>Bugs:</b></td><td valign="top"><pre> 
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> R Kupper, 
+        M.O. Gewaltig,
+
+</pre></td></tr><tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> Apr 9 1999
+
+</pre></td></tr><tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre> 
+         M_* values are defined in system dictionary.
+         You may introduce new priority levels in the user dictionary if convenient.
+         Standard values are: M_ALL    = 0
+                              M_DEBUG   = 5
+                              M_STATUS  = 7
+                              M_INFO    = 10
+                              M_WARNING = 20
+                              M_ERROR   = 30
+                              M_FATAL   = 40
+                              M_QUIET   = 100
+         Standard output:     M_OUT     = cout
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/setverbosity.html"><tt>setverbosity</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/misc_helpers.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

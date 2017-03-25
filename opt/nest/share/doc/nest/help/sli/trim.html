@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: trim</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: trim</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> trim - Delete leading/trailing elements in a container.
+   
+</pre></td></tr>   <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> MyStr Character Flag={0|1|2} trim -> TrimmedStr
+             MyArr Element   Flag={0|1|2} trim -> TrimmedArr
+
+</pre></td></tr>   <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre> The trim function returns a copy of MyStr (MyArr) with
+                leading and/or trailing Characters (Elements) removed.
+
+</pre></td></tr>   <tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre> In : MyStr(string): The String to be strimmed
+                    MyArr(array): The array to be trimmed
+                    
+               Optional In: Character(string): The character to remove
+                            Element(any)   : The element to remove
+                            
+                            Flag(int) : A value that controls the action
+                                       of trim. If Flag is zero,
+                                       trailing elements are removed.
+                                       Leading elements are removed if it is
+                                       equal to 1. Both are removed if it is
+                                       equal to 2.
+
+               Out: TrimmedStr(string)/TrimmedArr(array):
+                                       a copy of MyStr (MyArr) with
+                                       leading and/or trailing Characters (Elements) removed.
+
+</pre></td></tr>   <tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre> (--hello-you---) (-) 0 trim -> (hello-you---)
+             (--hello-you---) (-) 1 trim -> (--hello-you)
+             (--hello-you---) (-) 2 trim -> (hello-you)
+
+</pre></td></tr>   <tr><td valign="top"><b>Bugs:</b></td><td valign="top"><pre> array-type-trie doesn't work (why?)
+
+</pre></td></tr>   <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> R Kupper
+
+</pre></td></tr>   <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> Apr 10 1999
+
+</pre></td></tr>   <tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre> Inspired by IDL's STRTRIM-Function.
+            If Flag doesn't equal 0, 1 or 2, it defaults to 0 and
+             a warning message is issued
+            If trim is called on an empty container, a debugging message is issued
+            Set shutup-level to hide messages! (see shutup)
+
+   Procedure: a. Flag=0: Scan string for first non-occurance of character,
+                         then delete string up to this position.
+              b. Flag=1 executes a. on the reversed string
+              c. Flag=3 executes a. and b.
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/reverse.html"><tt>reverse</tt></a>  <a href="../sli/message.html"><tt>message</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/misc_helpers.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

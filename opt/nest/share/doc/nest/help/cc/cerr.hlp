@@ -1,0 +1,6 @@
+Name: cerr - Standard error output stream
+    Synopsis: cerr -> ostream
+    Description: cerr corresponds to the C++ object with the
+    same name.
+    SeeAlso: cin, cout
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

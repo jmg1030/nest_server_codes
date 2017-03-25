@@ -1,0 +1,11 @@
+Name: pclockspersec - POSIX clock ticks per second
+Synopsis: pclockspersec -> clockticks
+Description:
+pclockspersec i an integer variable containing the number of
+POSIX clock ticks per second.
+Author: Hans Ekkehard Plesser
+FirstVersion: 2003-07-29
+Remarks: Replaces clockspersecond.
+References: man 2 times
+SeeAlso: pclocks, ptimes, realtime, usertime, systemtime, tic, toc
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc

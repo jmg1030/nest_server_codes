@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: unittest::ToUnitTestPrecision</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: unittest::ToUnitTestPrecision</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> unittest::ToUnitTestPrecision  - reduce argument to specified precision.
+   
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre>
+   double integer ToUnitTestPrecision -> double or integer
+   array  integer ToUnitTestPrecision -> array
+   other  integer ToUnitTestPrecision -> other
+   
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+Reduces its double argument to the precision specified by the integer.
+If the first argument is an array, ToUnitTestPrecision is recursively
+applied to all elements of the array. Any other first argument is
+returned unchanged. This is useful in processing heterogeneous arrays.
+ToUnitTestPrecision uses a C++ output stream to carry out the reduction
+of precision and  manipulator setprecision() is used to set the precision.
+The contents of the stream is converted back to a numerical object by
+operator token. This guarantees that for the conversion from text to double
+the same algorithm
+is used for the argument of  ToUnitTestPrecision and the reference data,
+usually explicitly specified in the test file as an array. 
+The double argument may contain an integral value or be converted to and
+integral value due to the required precision. In this case the output
+operator of the stream may decide to represent the value as an integer,
+i. e. without a decimal point, trailing zeros, or an exponent. This often
+increases the readability of reference data arrays (see e.g. test_iaf). The
+SLI interpreter function then returns an object of type integer.
+The operators token and cvd use the same algorithm for converting text to
+to a numerical value. However cvd always return a double.
+ToUnitTestPrecision is not an efficient algorithm for rounding numerical
+values. The idea rather is to have an algorithm which is guaranteed to be
+compatible with the text stream output of a simulation.
+
+
+</pre></td></tr><tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre>
+    7.83635342928 6 ToUnitTestPrecision  -->    7.83635
+  -32.38763534    6 ToUnitTestPrecision  -->  -32.3876
+        (flower)  6 ToUnitTestPrecision  -->   (flower)
+  [7.83635342928 (flower) -32.38763534]
+                  6 ToUnitTestPrecision   --> [7.83635 (flower) -32.3876]
+  -70             6 ToUnitTestPrecision type --> /integertype
+  -70.0           6 ToUnitTestPrecision type --> /integertype
+  
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Markus Diesmann
+
+</pre></td></tr><tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> 071108
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/unittest::assert_or_die.html"><tt>unittest::assert_or_die</tt></a>  <a href="../sli/token.html"><tt>token</tt></a>  <a href="../sli/cvd.html"><tt>cvd</tt></a>  <a href="../sli/testsuite::test_iaf.html"><tt>testsuite::test_iaf</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/unittest.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

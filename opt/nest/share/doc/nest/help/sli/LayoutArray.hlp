@@ -1,0 +1,16 @@
+Name: LayoutArray - build a multidimensional array
+Synopsis: [d1 d2 ...] val LayoutArray -> [...]
+Parameters: [d1 d2 ...] - Array with dimensions.
+            val         - initialisation value for array entries
+Description:
+  LayoutArray generates a multi-dimensional array which is
+  initialised to val.
+
+Examples:
+   [5] 1 LayoutArray -> [1 1 1 1 1]
+   [2 3] 1.0 LayoutArray -> [ [1.0 1.0 1.0] [1.0 1.0 1.0]]
+
+Author: Marc-oliver Gewaltig
+FirstVersion: 20.6.02
+SeeAlso: ArrayShape, Range, Table, Dimensions, array
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

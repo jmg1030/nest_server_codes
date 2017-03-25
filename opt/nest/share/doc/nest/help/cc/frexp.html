@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: frexp</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: frexp</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> frexp - Decomposes its argument into an exponent of 2 and a factor
+</pre></td></tr> <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> double frexp -> double integer
+</pre></td></tr> <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+ This is an interface to the C++ function
+ double std::frexp(double,int*)
+ In accordance with the normalized representation of the mantissa
+ in IEEE doubles, the factor is in the interval [0.5,1).
+</pre></td></tr> <tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre> -5 dexp frexp -> 0.5 -4
+</pre></td></tr> <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Diesmann
+</pre></td></tr> <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> 17.5.2005
+</pre></td></tr> <tr><td valign="top"><b>References:</b></td><td valign="top"><pre> Stroustrup 3rd ed p 661
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/ldexp.html"><tt>ldexp</tt></a>  <a href="../cc/dexp.html"><tt>dexp</tt></a>  <a href="../cc/modf.html"><tt>modf</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slimath.cc
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

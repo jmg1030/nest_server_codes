@@ -1,0 +1,21 @@
+Name: Gammainc - incomplete gamma function
+
+Synopsis: x a Gammainc -> result
+
+Description: Computes the incomplete Gamma function
+             int(t^(a-1)*exp(-t), t=0..x) / Gamma(a)
+
+Parameters:  x      (double): upper limit of integration
+             a      (double): order of Gamma function
+
+Examples: 2.2 1.5 Gammainc -> 0.778615
+
+Author: H E Plesser
+
+FirstVersion: 2001-07-26
+
+Remarks: This is the incomplete Gamma function P(a,x) defined as no. 6.5.1
+         in Abramowitz&Stegun.  Requires the GSL.
+
+References: http://sources.redhat.com/gsl/ref
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/specialfunctionsmodule.h

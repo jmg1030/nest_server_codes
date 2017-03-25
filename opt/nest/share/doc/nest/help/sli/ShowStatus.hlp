@@ -1,0 +1,12 @@
+Name: ShowStatus - Show the status dictionary of a network node.
+
+   Synopsis:
+   gid ShowStatus -> -
+
+   Description:
+   ShowStatus retrieves the status dictionary of the specified node
+   and displays it, using info.
+   ShowStatus is equivalent to the sequence "GetStatus info"
+
+   SeeAlso: GetStatus, info
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/nest-init.sli

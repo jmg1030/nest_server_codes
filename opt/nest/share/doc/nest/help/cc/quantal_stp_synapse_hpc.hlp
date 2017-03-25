@@ -1,0 +1,3 @@
+Name: quantal_stp_synapse_hpc - Variant of quantal_stp_synapse with low memory consumption.
+     SeeAlso: synapsedict, quantal_stp_synapse, static_synapse_hpc
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/models/modelsmodule.cpp

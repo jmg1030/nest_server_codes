@@ -1,0 +1,5 @@
+Name: StringQ - returns true if top object is a string
+Synposis: string StringQ -> true
+          any    StringQ -> false
+SeeAlso: NumberQ, LiteralQ, ArrayQ
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

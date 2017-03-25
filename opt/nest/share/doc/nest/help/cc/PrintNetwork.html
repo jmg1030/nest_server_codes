@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: PrintNetwork</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: PrintNetwork</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> PrintNetwork - Print network tree in readable form.
+</pre></td></tr>   <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre>
+   gid depth  PrintNetwork -> -
+</pre></td></tr>   <tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre>
+   gid        - Global ID of the subnet to start tree printout.
+   depth      - Integer, specifies down to which level the network is printed.
+</pre></td></tr>   <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+   This function prints the network structure in a concise tree-like format
+   according to the following rules:
+   - Each Node is shown on a separate line, showing its model name followed
+   by its in global id in brackets.
+
+   +-[0] Subnet Dim=[1]
+   |
+   +- iaf_neuron [1]
+
+   - Consecutive Nodes of the same model are summarised in a list.
+   The list shows the model name, the global id of the first node in the
+   sequence, then the number of consecutive nodes, then the global id of
+   the last node in the sequence.
+
+   +-[0] Subnet Dim=[1]
+   |
+   +- iaf_neuron [1]..(2)..[2]
+
+   - If a node is a subnet, its global id is printed first, followed by the model
+   name or its label (if it is defined). Next, the dimension is shown.
+   If the current recursion level is less than the specified depth, the printout descends
+   to the children of the subnet.
+   After the header, a new line is printed, followed by the list of children
+   at the next indentation level.
+   After the last child, a new line is printed and the printout of the parent subnet
+   is continued.
+
+   Example:
+   SLI ] /iaf_neuron Create
+   SLI [1] /iaf_cond_alpha 10 Create
+   SLI [2] /dc_generator [2 5 6] LayoutNetwork
+   SLI [3] [0] 1 PrintNetwork
+   +-[0] Subnet Dim=[12]
+      |
+      +- iaf_neuron [1]
+      +- lifb_cond_neuron [2]..(10)..[11]
+      +-[12] Subnet Dim=[2 5 6]
+   SLI [3] [0] 2 PrintNetwork
+   +-[0] Subnet Dim=[12]
+      |
+      +- iaf_neuron [1]
+      +- lifb_cond_neuron [2]..(10)..[11]
+      +-[12] Subnet Dim=[2 5 6]
+          |
+          +-[13] Subnet Dim=[5 6]
+          +-[49] Subnet Dim=[5 6]
+   SLI [3] [0] 3 PrintNetwork
+   +-[0] Subnet Dim=[12]
+      |
+      +- iaf_neuron [1]
+      +- lifb_cond_neuron [2]..(10)..[11]
+      +-[12] Subnet Dim=[2 5 6]
+          |
+          +-[13] Subnet Dim=[5 6]
+          |   |
+          |   +-[14] Subnet Dim=[6]
+          |   +-[21] Subnet Dim=[6]
+          |   +-[28] Subnet Dim=[6]
+          |   +-[35] Subnet Dim=[6]
+          |   +-[42] Subnet Dim=[6]
+          +-[49] Subnet Dim=[5 6]
+              |
+              +-[50] Subnet Dim=[6]
+              +-[57] Subnet Dim=[6]
+              +-[64] Subnet Dim=[6]
+              +-[71] Subnet Dim=[6]
+              +-[78] Subnet Dim=[6]
+   SLI [3] [0] 4 PrintNetwork
+   +-[0] Subnet Dim=[12]
+      |
+      +- iaf_neuron [1]
+      +- lifb_cond_neuron [2]..(10)..[11]
+      +-[12] Subnet Dim=[2 5 6]
+          |
+          +-[13] Subnet Dim=[5 6]
+          |   |
+          |   +-[14] Subnet Dim=[6]
+          |   |   |
+          |   |   +- dc_generator [15]..(6)..[20]
+          |   |
+          |   +-[21] Subnet Dim=[6]
+          |   |   |
+          |   |   +- dc_generator [22]..(6)..[27]
+          |   |
+          |   +-[28] Subnet Dim=[6]
+          |   |   |
+          |   |   +- dc_generator [29]..(6)..[34]
+          |   |
+          |   +-[35] Subnet Dim=[6]
+          |   |   |
+          |   |   +- dc_generator [36]..(6)..[41]
+          |   |
+          |   +-[42] Subnet Dim=[6]
+          |       |
+          |       +- dc_generator [43]..(6)..[48]
+          |
+          +-[49] Subnet Dim=[5 6]
+              |
+              +-[50] Subnet Dim=[6]
+              |   |
+              |   +- dc_generator [51]..(6)..[56]
+              |
+              +-[57] Subnet Dim=[6]
+              |   |
+              |   +- dc_generator [58]..(6)..[63]
+              |
+              +-[64] Subnet Dim=[6]
+              |   |
+              |   +- dc_generator [65]..(6)..[70]
+              |
+              +-[71] Subnet Dim=[6]
+              |   |
+              |   +- dc_generator [72]..(6)..[77]
+              |
+              +-[78] Subnet Dim=[6]
+                  |
+                  +- dc_generator [79]..(6)..[84]
+
+
+</pre></td></tr>   <tr><td valign="top"><b>Availability:</b></td><td valign="top"><pre> NEST
+</pre></td></tr>   <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Marc-Oliver Gewaltig, Jochen Martin Eppler
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/nestmodule.cpp
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

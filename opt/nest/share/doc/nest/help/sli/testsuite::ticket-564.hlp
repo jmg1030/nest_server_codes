@@ -1,0 +1,11 @@
+Name: testsuite::ticket-564 - Regression test for OpenMP-parallel problems on OSX
+
+Synopsis: (ticket-564) run -> NEST exits if test fails
+
+Description: 
+This test uses RandomConvergentConnect to connect a net of 100 neurons
+to itself, with 100 connections per neuron, a total of 10000 connections.
+This is repeated 10 times, and the resulting number of connections checked. 
+ 
+Author: Hans Ekkehard Plesser, 2012-05-27
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/regressiontests/ticket-564.sli

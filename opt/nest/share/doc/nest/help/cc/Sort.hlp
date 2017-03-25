@@ -1,0 +1,12 @@
+Name: Sort - Sorts a homogeneous array of doubles, ints, or strings.
+Synopsis:
+ array Sort -> array
+Parameters:
+ array of doubles, ints, or strings
+Description:
+ The present implementation is restricted to doubles, ints, and strings.
+Examples:
+ [8. 4. 3. 6. 9. 5.] Sort --> [3. 4. 5. 6. 8. 9.]
+Author: Diesmann, Eppler
+SeeAlso: Max, Min
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sliarray.cc

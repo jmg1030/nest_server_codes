@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: mkfifo</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: mkfifo</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> mkfifo - Create a FIFO special file (named pipe)
+
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> path mkfifo -> -
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre> The "mkfifo" command creates a new FIFO special file named
+             "path". The permission bits are set to "rwx rwx rwx" (full access
+             for anyone). Note that these bits may be modified by the process'
+             file creation mask. (See remarks below.)
+
+             Alternative: Functions mkfifo_s (undocumented)
+             -> behaviour and synopsis are the same.
+
+</pre></td></tr><tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre> In: path(string):
+                 Path name of the FIFO to create.
+
+</pre></td></tr><tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre> (/home/kupper/my_fifo) mkfifo
+
+</pre></td></tr><tr><td valign="top"><b>Diagnostics:</b></td><td valign="top"><pre> If a system-error occurs, a code is stored in "sys_errno"
+             (contained in errordict) to identify the error, and "sys_errname" is
+             set to the error message. Then a "SystemError" is raised.
+             The following system errors may be issued, according to the
+             POSIX standard:
+
+              EACCES  Search permission denied for a directory in a file's path
+                      prefix.
+              EEXIST  The named file already exists.
+              ENOENT  A file or directory does not exist.
+              ENOSPC  No space left on disk.
+              ENOTDIR A component of the specified pathname was not a directory
+                      when a directory was expected.
+              EROFS   Read-only file system.
+
+</pre></td></tr><tr><td valign="top"><b>Bugs:</b></td><td valign="top"><pre> -
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> R. Kupper
+
+</pre></td></tr><tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> Aug 13 1999 (Friday 13th!)
+
+</pre></td></tr><tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre> The FIFO may be used (and has to be opened) like any regular file.
+
+         In special cases, it might be desireable to change the FIFO's file
+         permission bits. This is not supported by SLI commands.
+         Use UNIX-command "chmod" to change file permissions on the newly
+         created file, or use UNIX-command "umask" to set the process' file
+         creation mask. (See command "system" for issuing UNIX-commands from
+         SLI).
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/pipe.html"><tt>pipe</tt></a>  <a href="../cc/mkfifo.html"><tt>mkfifo</tt></a>  <a href="../cc/ifstream.html"><tt>ifstream</tt></a>  <a href="../cc/available.html"><tt>available</tt></a>  <a href="../sli/ignore.html"><tt>ignore</tt></a>  <a href="../sli/dup2.html"><tt>dup2</tt></a>  </td></tr>
+
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/sli/processes.h
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

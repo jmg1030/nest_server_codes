@@ -1,0 +1,5 @@
+Name: currentdict - return topmost dictionary of the dictionary stack
+   Synopsis: currentdict -> dict
+   Description: Returns a reference to the current dictionary.
+   SeeAlso: dictstack, begin, end, cleardictstack, who, whos
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slidict.cc

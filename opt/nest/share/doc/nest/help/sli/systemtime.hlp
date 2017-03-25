@@ -1,0 +1,12 @@
+Name: systemtime - returns system time for current process 
+ Synopsis:  systemtime -> stime
+ Description: 
+ Calls the POSIX times() function to obtain system time for the current
+ process in seconds.  The value might not be meaningful if more than
+ one thread is used.
+
+ Author: Hans Ekkehard Plesser
+ FirstVersion: 2003-07-29
+ References: man 2 times
+ SeeAlso: ptimes, realtime, systemtime, tic, toc, pclockspersec, pclocks
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

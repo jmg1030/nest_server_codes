@@ -1,0 +1,3 @@
+Name: setpath -  Append string to path array
+ SeeAlso: addpath, path
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

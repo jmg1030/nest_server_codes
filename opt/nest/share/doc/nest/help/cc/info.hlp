@@ -1,0 +1,28 @@
+Name: info - Display the contents of a dictionary
+
+   Synopsis: ostream dict info -> -
+
+   Description:
+     Prints the contents of the dictionary to the supplied stream.
+
+   Parameters:
+     dict - a dictionary
+     No return values are given.
+
+   Examples:
+   std::cout  <</a 1 /b 2.5 /c (Hallo World)>> info
+
+   shows
+
+--------------------------------------------------
+Name                     Type                Value
+--------------------------------------------------
+a                        integertype         1
+b                        doubletype          2.5
+c                        stringtype          Hallo World
+--------------------------------------------------
+Total number of dictionary entries: 3
+
+   SeeAlso: info_ds, topinfo_d, who, whos
+
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slidict.cc

@@ -1,0 +1,34 @@
+Name: helpindex - displays a list of all commands
+
+ Synopsis: helpindex -> -
+
+ Description:
+   helpindex prints a list of all commands together with a short summary
+   of their usage.
+
+   helpindex uses the command "page" to display its information.
+   Type
+       /page help
+   to learn how to customize the output of this command.
+
+ Parameters: none
+
+ Examples:
+   helpindex --> lists all commands
+
+ Bugs: Should work with a string parameter giving some letters or
+ keywords, e.g. (ma) helpindex --> list of all commands beginning with ma
+ or (file) helpindex --> list of all commands for filehandling!
+
+ Author: Hehl
+
+ FirstVersion: April 20, 1999
+
+ Remarks: 
+  helpindex uses the command "page" to display its information.
+  Type
+      /page help
+  to learn how to customize the output of this command.
+
+ SeeAlso: help, apropos, which
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/helpinit.sli

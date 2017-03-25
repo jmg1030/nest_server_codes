@@ -1,0 +1,8 @@
+Name: testsuite::test_assert_or_die_p - sli script to test the assert_or_die function (proceure variant)
+
+   Synopsis: (test_assert_or_die_p) run
+
+   FirstVersion: 07-jul-2008
+
+   Author: R Kupper
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/selftests/test_assert_or_die_p.sli

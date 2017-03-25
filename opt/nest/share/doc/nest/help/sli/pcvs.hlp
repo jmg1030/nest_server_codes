@@ -1,0 +1,8 @@
+Name: pcvs - Convert object to string (long version)
+ Description: pcvs converts every object into a string (long version)
+ Examples: 23 pcvs -> (23)
+ {3 2 mul dup} pcvs -> ({3 2 mul dup})
+ (hello) pcvs -> ((hello))
+ Author: R Kupper by copy-and-modify from cvs
+ SeeAlso: cvs, print, pprint
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

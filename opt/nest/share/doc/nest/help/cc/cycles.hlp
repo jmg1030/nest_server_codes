@@ -1,0 +1,3 @@
+Name: cycles - return the number of elapsed interpreter cycles
+Synopsis: cycles -> n
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc

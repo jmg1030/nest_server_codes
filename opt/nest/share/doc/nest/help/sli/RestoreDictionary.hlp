@@ -1,0 +1,4 @@
+Name: RestoreDictionary - Read a dictionary definition from a file.
+Synopsis: (fname) RestoreDictionary -> dict
+SeeAlso: SaveDictionary, MergeDictionary
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/FormattedIO.sli

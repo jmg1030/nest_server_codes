@@ -1,0 +1,21 @@
+Name: getPID - Get ID of the current process
+
+Synopsis: getPID -> -
+
+Description: Returns the process ID for the calling process.
+
+Parameters: -
+
+Examples: (I am process #) =only getPID =
+
+Diagnostics: A call to "getPID" should never produce an error.
+
+Bugs: -
+
+Author: R Kupper
+
+FirstVersion: May 26 1999
+
+SeeAlso: getPPID, getPGRP, fork, spoon, waitPID, kill, system, spawn, shpawn
+
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/processes.h

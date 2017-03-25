@@ -1,0 +1,6 @@
+Name: cin - Standard input stream
+    Synopsis: cin -> istream
+    Description: cin corresponds to the C++ object with the
+    same name.
+    SeeAlso: cout, cerr
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

@@ -1,0 +1,10 @@
+Name: CopyFile - Copy a file
+ Synopsis: (sourcefilename) (targetfilename) CopyFile -> -
+ Description: Copy a file.
+ Examples: (Simulation1) (Sim1Backup) CopyFile
+ Author: R Kupper
+ FirstVersion: 06 aug 2008
+ Diagnostics: Issues informative message and
+   raises /BadIO if file cannot be copied for any reason.
+ SeeAlso: MoveFile, ofstream, ifstream, DeleteFile, FileNames, MakeDirectory, RemoveDirectory
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/filesystem.sli

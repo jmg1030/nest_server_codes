@@ -1,0 +1,8 @@
+Name: testsuite::test_crash_or_die - sli script to test the crash_or_die function
+
+   Synopsis: (test_crash_or_die) run
+
+   FirstVersion: 090227
+
+   Author: Diesmann
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/selftests/test_crash_or_die.sli

@@ -1,0 +1,20 @@
+Name: FixedPoint - applies a procedure repeatedly until the result is an invariant
+Synopsis:
+         any proc         FixedPoint -> any
+         any proc integer FixedPoint -> any
+Description:
+FixedPoint called with three arguments applies the procedure not more
+than n times. The first argument is the initial value.
+Examples:
+ (kaeschperle) {Rest (_) join} FixedPoint   --> (___________)
+ (kaeschperle) {Rest (_) join} 1 FixedPoint --> (aeschperle_)
+ (kaeschperle) {Rest (_) join} 3 FixedPoint --> (schperle___)
+Remarks:
+Compared to Mathematica the first two arguments are reversed
+for better conformance with RPN.
+Author: Diesmann
+FirstVersion: May 21 2001
+References:
+  [1] The Mathematica Book V4.0 "Flatten"
+SeeAlso: Flatten
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

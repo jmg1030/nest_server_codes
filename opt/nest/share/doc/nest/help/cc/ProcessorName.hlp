@@ -1,0 +1,15 @@
+Name: ProcessorName - Returns a unique specifier for the actual node.
+   Synopsis: ProcessorName -> string
+   Availability: NEST 2.0
+   Author: Alexander Hanuschkin
+   FirstVersion: April 2009
+   Description:
+   This function returns the name of the processor it was called
+   on (MPI_Get_processor_name). See MPI documentation for more details. If NEST is not
+   compiled with MPI support, this function returns the hostname of
+   the machine as returned by the POSIX function gethostname().
+   Examples:
+   (I'm process ) =only Rank 1 add =only ( of ) =only NumProcesses =only ( on machine ) =only
+   ProcessorName =
+   SeeAlso: Rank, NumProcesses, SyncProcesses
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/nestmodule.cpp

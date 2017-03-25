@@ -1,0 +1,9 @@
+Name: testsuite::test_hh_cond_exp_traub - sli script for overall test of hh_cond_exp_traub model
+
+    Synopsis: (test_hh_cond_exp_traub) run -> 
+
+    Description:
+
+    Author:  
+    SeeAlso: 
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/manualtests/test_hh_cond_exp_traub.sli

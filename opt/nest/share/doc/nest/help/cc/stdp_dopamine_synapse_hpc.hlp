@@ -1,0 +1,3 @@
+Name: stdp_dopamine_synapse_hpc - Variant of stdp_dopamine_synapse with low memory consumption.
+     SeeAlso: synapsedict, stdp_dopamine_synapse, static_synapse_hpc
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/models/modelsmodule.cpp

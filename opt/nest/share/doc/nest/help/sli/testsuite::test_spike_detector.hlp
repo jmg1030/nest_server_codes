@@ -1,0 +1,10 @@
+Name: testsuite::test_spike_detector - sli script to test spike_detector device
+
+   Synopsis: (test_spike_detector) run
+
+   Description:
+ 
+
+   FirstVersion: Jan 2008
+   Author: Diesmann, Eppler
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_spike_detector.sli

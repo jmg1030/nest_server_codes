@@ -1,0 +1,21 @@
+Name: getPGRP - Get process group ID of the current process
+
+Synopsis: getPGRP -> -
+
+Description: Returns the process group ID for the calling process.
+
+Parameters: -
+
+Examples: (I am member of process group #) =only getPGRP =
+
+Diagnostics: A call to "getPGRP" should never produce an error.
+
+Bugs: -
+
+Author: R Kupper
+
+FirstVersion: Apr 18 2000
+
+SeeAlso: fork, getPID, kill
+
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/processes.h

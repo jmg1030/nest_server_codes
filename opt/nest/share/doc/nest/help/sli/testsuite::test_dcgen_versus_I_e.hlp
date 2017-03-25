@@ -1,0 +1,14 @@
+Name: testsuite::test_dcgen_versus_I_e - sli script to test if setting I_e and applying a DC generator yields the same results.
+
+   Synopsis: (test_dcgen_versus_I_e) run
+
+   Description:
+   This testscript checks consistency between currents coming from dc_generator and internal variable I_e;
+   The approach is to simulate both situations for some time and compare membrane potentials at the end;
+   Any model which supports current events and setting I_e is checked, other models are skipped.
+
+   SeeAlso: testsuite::test_iaf_i0
+
+   FirstVersion: January 2011
+   Author: Sven Schrader
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_dcgen_versus_I_e.sli

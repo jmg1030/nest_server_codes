@@ -1,0 +1,12 @@
+Name: neg_d - reverse sign of double value
+ Synopsis:   double neg -> double
+ Author: Diesmann
+ FirstVersion: 29.7.1999
+ Remarks:
+    implemented by C/C++
+      - operator
+  This function is called CHS in HP48S and
+  related dialects.
+
+ SeeAlso: neg
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slimath.cc

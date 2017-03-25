@@ -1,0 +1,19 @@
+Name: FileNames - return contents of current working directory
+ Synopsis: string FileNames -> array
+           regex  FileNames -> array
+ Description: FileNames reads contents of current working directory
+    via POSIX commands. Only files matching the regular expression
+    mask set in string/regex are used.
+ Parameters: string : a mask converted to the regex
+             regex  : the regular expression used to filter files
+             array  : an array of strings containing matched files
+ Examples: (.*) FileNames -> all files of current directory
+           Remember that POSIX regex and those used by ls are not
+           necessarily the same !
+ Bugs: see remarks
+ Author: Hehl
+ FirstVersion: Oct 12th 1999
+ Remarks: Sorting of files done by :sort, a dummy UNIX sorter which
+    is far from protable!
+ SeeAlso: SetDirectory, Directory, ls, cd
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/filesystem.sli

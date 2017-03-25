@@ -1,0 +1,13 @@
+Name: rdevdict::binomial - binomial random deviate generator
+Description:
+   Generates binomially distributed random numbers.
+
+   p(k) = (n! / k!(n-k)!) p^k (1-p)^(n-k)  , 0<=k<=n, n>0
+
+Parameters:
+   p - probability of success in a single trial (double)
+   n - number of trials (positive integer)
+
+SeeAlso: CreateRDV, RandomArray, rdevdict
+Author: Hans Ekkehard Plesser, Moritz Deger
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/librandom/binomial_randomdev.h
