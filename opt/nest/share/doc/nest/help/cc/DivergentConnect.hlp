@@ -1,0 +1,28 @@
+Name: DivergentConnect - Connect node to a population of nodes.
+
+   Synopsis:
+   source [targets]                              DivergentConnect -> -
+   source [targets]                    /synmodel DivergentConnect -> -
+   source [targets] [weights] [delays]           DivergentConnect -> -
+   source [targets] [weights] [delays] /synmodel DivergentConnect -> -
+
+   Parameters:
+   source    - GID of source node
+   [targets] - array of (global IDs of) potential target nodes
+   [weights] - weights for the connections. List of the same size as targets or 1.
+   [delays]  - delays for the connections. List of the same size as targets or 1.
+   /synmodel - The synapse model for the connection (see Options below)
+
+   Options:
+   If not given, the synapse model is taken from the Options dictionary
+   of the Connect command.
+
+   Description:
+   Connect a neuron with a set of target neurons.
+
+   Author:
+   Marc-Oliver Gewaltig
+   modified Ruediger Kupper, 20.3.2003
+   modified Jochen Eppler, 04.11.2005
+   SeeAlso: RandomDivergentConnect, ConvergentConnect
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/nestmodule.cpp

@@ -1,0 +1,8 @@
+Name: repeatany - Place any object n times on stack.
+
+Synopsis: n obj repeatany -> obj obj ... obj (n times)
+
+Examples: 3 (foo) repeatany -> (foo) (foo) (foo)
+
+SeeAlso: repeat, Table
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slidata.cc

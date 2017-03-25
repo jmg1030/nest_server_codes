@@ -1,0 +1,7 @@
+Name: proxynode - Proxy to provide Nodes on remote machines
+Description:
+Remarks:
+Parameters:
+References:
+Author: June 2005, Jochen Martin Eppler
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/proxynode.h

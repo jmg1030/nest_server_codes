@@ -1,0 +1,12 @@
+Name: SyncProcesses - Synchronize all MPI processes.
+   Synopsis: SyncProcesses -> -
+   Availability: NEST 2.0
+   Author: Alexander Hanuschkin
+   FirstVersion: April 2009
+   Description:
+   This function allows to synchronize all MPI processes at any
+   point in a simulation script. Internally, the function uses
+   MPI_Barrier(). Note that during simulation the processes are
+   automatically synchronized without the need for user interaction.
+   SeeAlso: Rank, NumProcesses, ProcessorName
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/nestmodule.cpp

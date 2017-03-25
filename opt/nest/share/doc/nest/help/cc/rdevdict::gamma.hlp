@@ -1,0 +1,13 @@
+Name: rdevdict::gamma - gamma random deviate generator
+Description:
+   Generates gamma-distributed random numbers.
+
+   gamma(x; order, b) = x^(order-1) * exp(-x/b) / b^order Gamma(order) , x >= 0
+
+Parameters:
+   order - order of the gamma distribution (default: 1)
+   b - scale parameter (default: 1)
+
+SeeAlso: CreateRDV, RandomArray, rdevdict
+Author: Hans Ekkehard Plesser
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/librandom/gamma_randomdev.h

@@ -1,0 +1,4 @@
+Name: Install - Load a dynamic module to extend the functionality.
+  Description:
+  Synopsis: (module_name) Install -> handle
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/dynamicloader.cpp

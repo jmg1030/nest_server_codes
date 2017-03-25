@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: def</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: def</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> def - define a variable or function
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> /name obj def -> -
+          /name [/type1 .. /typen] any def -> -
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+def creates an association between /name and obj
+in the current dictionary. 
+
+First variant:
+  The first variant unconditionally creates the association. Any
+  existing association will be overwritten.
+
+Second variant:
+  The second variant creates a user-defined function with automatic
+  parameter checking. The second parameter must be an array of valid
+  type-specifiers. The last parameter must be a procedure object. If
+  the name is already bound to a trie, the new definition is added
+  to the trie, otherwise a trie is created.
+
+  If the array of type-specifiers is empty, it is checked, if there
+  already exists a trie for this name. If so, the definition would be
+  ambiguous, and an error is raised. If not, the first variant of
+  def is called.
+
+  Note that no name binding via bind is performed.
+
+</pre></td></tr><tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre>
+SLI ] /a 1 def
+SLI ] a =
+1 
+
+SLI ] /f [/integertype /integertype] {add_ii} def
+SLI ] 1 2 f
+SLI [1] =
+3
+SLI ] 1 2.0 f
+TypeTrie::lookup error at parameter level 0
+Operand      : 2
+Operand type : doubletype
+Expected type: integertype
+Error: /ArgumentType in f
+SLI ]  /f [/integertype /doubletype] {add_id} def
+SLI ] 1 2.0 f =
+2
+SLI ] 1 2 f
+SLI [1] =
+3
+
+</pre></td></tr><tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre>
+Ambiguous type trie definitions are not always detected! Only if the
+new parameter list is longer than an existing one, a warning is issued
+(but no error is raised). This needs improvement.
+
+Author'sRemark: Maybe the trie variant should be called deffun, like in lisp.
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Marc-oliver Gewaltig
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/bind.html"><tt>bind</tt></a>  <a href="../cc/type.html"><tt>type</tt></a>  <a href="../cc/Set.html"><tt>Set</tt></a>  <a href="../cc/undef.html"><tt>undef</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/typeinit.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

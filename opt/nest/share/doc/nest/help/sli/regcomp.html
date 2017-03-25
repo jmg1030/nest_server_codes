@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: regcomp</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: regcomp</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> regcomp - Create a regular expression 
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> string integer regcomp -> regex
+          string         regcomp -> regex
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+regcomp will prepare a regular expression to be used with regexec.
+Any allowed flags are found in dictionary regexdict.
+</pre></td></tr><tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre> in:  string: defining the regular expression,
+                 integer: flag, see Remarks. If in doubt, choose second
+                          call of regcomp which presets integer to REG_EXTENDED.
+           out:  the regular expression object
+
+</pre></td></tr><tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre> 1) (.*) regcomp -> <regextype>
+          2) regexdict begin 
+             (\() REG_EXTENDED regcomp -> <ERROR>
+</pre></td></tr><tr><td valign="top"><b>Diagnostics:</b></td><td valign="top"><pre> 
+If the string cannot be converted to a regular expression,
+an error message is displayed and /InvalidRegexError is raised.
+
+<tr><td valign="top"><b>Variants:</b></td><td valign="top"></td></tr>
+The variant "regcomp_" never raises an error, but returns:
+ -> regex true
+ -> regex integer false
+In case of an error, the regex error code is returned as an integer.
+This error code can be translated to a string using ":regerror" (see there).
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Diesmann & Hehl, R Kupper (added error handling)
+
+</pre></td></tr><tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> 27.9.99
+
+</pre></td></tr><tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre> See man regcomp for futher details on POSIX regcomp.
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/regexec.html"><tt>regexec</tt></a>  <a href="../sli/:regerror.html"><tt>:regerror</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/regexp.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

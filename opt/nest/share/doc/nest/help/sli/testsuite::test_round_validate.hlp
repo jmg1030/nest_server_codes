@@ -1,0 +1,16 @@
+Name: testsuite::test_round_validate - check if round function works
+
+Synopsis: (test_round_validate) run -> 
+
+Description:
+
+Tests basic properties of round. Note that the tests
+are directly compiled from the the Examples section of
+the documentation which is evaluated by the command 
+/validate .
+Future versions of NEST should generate this test 
+directly from the Examples section.
+
+Author:  130531, Diesmann
+SeeAlso: floor, cvi
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_round_validate.sli

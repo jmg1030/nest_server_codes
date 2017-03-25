@@ -1,0 +1,14 @@
+Name: oeof - Check the "eof"-flag of an output stream.
+     Synopsis: ostreamhandle oeof -> ostreamhandle true
+     -> ostreamhandle false
+     Description:
+     This function provides a direct interface to
+     the C++ ostream::eof() member function.
+     Parameters:
+     Examples:
+     Bugs:
+     Author: Diesmann, Hehl
+     FirstVersion: 19.4.1999
+     Remarks:
+     SeeAlso: ieof, eof
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

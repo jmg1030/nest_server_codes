@@ -1,0 +1,4 @@
+Name: verbosity - return the current verbosity level for interpreter messages
+Synopsis: verbosity -> n
+SeeAlso: setverbosity, message
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc

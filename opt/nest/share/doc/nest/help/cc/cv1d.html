@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: cv1d</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: cv1d</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> cv1d - convert 2-dimensional coordinates to 1-dim index
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> y   x   w  cv1d -> i
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre> This function converts a 2-dimensional matrix address to
+the corresponding index of a linear array.  Useful if you have to handle
+2-dimensional data (e.g. an image) which is stored in a linear array.
+Note that by convention the origin is 0,0 and at the upper left corner.
+
+</pre></td></tr><tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre> y : integer. the y-coordinate
+x : integer. the x coordinate
+w : integer. the border with of the 2-dimensional coordinate system
+
+Example: 3 2 4 cv1d -> 14
+3 is the y-coordinate (row)
+2 is the x coordinate (column)
+4 is the number of columns
+14 is the index of the corresponding element in a 1-dimensional array
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/cst.html"><tt>cst</tt></a>  <a href="../sli/cva.html"><tt>cva</tt></a>  <a href="../cc/cv2d.html"><tt>cv2d</tt></a>  <a href="../sli/cvd.html"><tt>cvd</tt></a>  <a href="../sli/cvi.html"><tt>cvi</tt></a>  <a href="../sli/cvlit.html"><tt>cvlit</tt></a>  <a href="../sli/cvn.html"><tt>cvn</tt></a>  <a href="../sli/cvs.html"><tt>cvs</tt></a>  <a href="../cc/cvt_a.html"><tt>cvt_a</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sliarray.cc
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

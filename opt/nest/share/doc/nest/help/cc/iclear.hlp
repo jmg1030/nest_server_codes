@@ -1,0 +1,13 @@
+Name: iclear - Clear the state-flags of input stream.
+     Synopsis: istream iclear -> istream
+
+     Description:
+     This function provides a direct interface to
+     the C++ istream::clear() member function.
+
+     Bugs:
+     Author: Gewaltig
+
+     Remarks:
+     SeeAlso: oclear, good
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

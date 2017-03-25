@@ -1,0 +1,10 @@
+Name: NestList - gives a list of the results of applying f to x 0 through n times.
+Synopsis: x f n NestList ->  [x, x f,  x f f,..., x f1 ... fn]
+Parameters: x - any object to which f can be applied
+            f - an executable object.
+Description: NestList repeatedly applies f to the supplied argument and returns
+             the result als well as all intermediate results in a list.
+             Note that f must expect and return exactly one argument.
+Examples:   1 {2 mul} 3 NestList -> [1 2 4 8]
+SeeAlso: Map, forall
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

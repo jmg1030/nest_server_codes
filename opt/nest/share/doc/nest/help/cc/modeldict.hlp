@@ -1,0 +1,5 @@
+Name: modeldict - dictionary containing all devices and models of NEST
+     Description:
+     'modeldict info' shows the contents of the dictionary
+     SeeAlso: info, Device, RecordingDevice, iaf_neuron, subnet
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/network.h

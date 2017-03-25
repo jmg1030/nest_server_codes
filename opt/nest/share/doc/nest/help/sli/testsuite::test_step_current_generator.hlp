@@ -1,0 +1,11 @@
+Name: testsuite::test_step_current_generator - minimal test of noise_generator
+
+Synopsis: (test_step_current_generator) run -> dies if assertion fails
+
+Description:
+Tests parameter setting and statistical correctness for one application.
+
+Author: Plesser
+FirstVersion: July 2008
+SeeAlso: noise_generator
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_step_current_generator.sli

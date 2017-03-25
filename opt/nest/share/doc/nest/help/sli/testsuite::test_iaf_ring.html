@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: testsuite::test_iaf_ring</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: testsuite::test_iaf_ring</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> testsuite::test_iaf_ring - sli script for test of iaf_neuron spike interaction
+across multiple machines.
+
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> nest_indirect test_iaf_ring  --> success
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+
+ test_iaf_ring checks if spikes can travel along a chain of neurons
+ and whether the result is independent of the number of machines 
+ involved in the computation.
+
+ The unittest function distributed_assert_or_die can only handle the
+ output of a single machine. Therefore the script collects the spikes
+ of all neurons using a parrot neuron. The script does not check the 
+ id of the sender, only the spike timing. A more strict test could be 
+ carried out with a unittest function which merges the output of all 
+ machines.
+
+ The correct sequence of spikes including their ids is documented at
+ the end of this file. Note that due to the use of an intermediate
+ parrot neuron the reported spike times have an offset of 1ms (10
+ steps) with respect to the documented values. The offset corresponds
+ to the default delay of 1ms.
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Joche Martin Eppler, Markus Diesmann, Marc-Oliver Gewaltig
+</pre></td></tr><tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> January 2006
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/testsuite::test_iaf_i0.html"><tt>testsuite::test_iaf_i0</tt></a>  <a href="../sli/testsuite::test_getrng_neuron.html"><tt>testsuite::test_getrng_neuron</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/mpitests/test_iaf_ring.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

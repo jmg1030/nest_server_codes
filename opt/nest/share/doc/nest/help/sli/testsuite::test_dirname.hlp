@@ -1,0 +1,13 @@
+Name: testsuite::test_dirname - tests dirname from filesystem.sli for POSIX conformance
+
+   Synopsis: (test_dirname) run
+
+   Description:
+
+   This test runs the dirname test cases from coreutils distribution.
+
+   SeeAlso: dirname
+
+   FirstVersion: November 2012
+   Author: Yury V. Zaytsev
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_dirname.sli

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: iaf_psc_alpha_multisynapse</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: iaf_psc_alpha_multisynapse</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> iaf_psc_alpha_multisynapse - Leaky integrate-and-fire neuron model with multiple ports.
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+
+iaf_psc_alpha_multisynapse is a direct extension of iaf_psc_alpha.
+On the postsynapic side, there can be arbitrarily many synaptic
+time constants (iaf_psc_alpha has exactly two: tau_syn_ex and tau_syn_in).
+
+This can be reached by specifying separate receptor ports, each for
+a different time constant. The port number has to match the respective
+"receptor_type" in the connectors.
+
+</pre></td></tr><tr><td valign="top"><b>Sends:</b></td><td valign="top"><pre> SpikeEvent
+
+</pre></td></tr><tr><td valign="top"><b>Receives:</b></td><td valign="top"><pre> SpikeEvent, CurrentEvent, DataLoggingRequest
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre>  Schrader, adapted from iaf_psc_alpha
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/iaf_psc_alpha.html"><tt>iaf_psc_alpha</tt></a>  <a href="../cc/iaf_psc_delta.html"><tt>iaf_psc_delta</tt></a>  <a href="../cc/iaf_psc_exp.html"><tt>iaf_psc_exp</tt></a>  <a href="../cc/iaf_cond_exp.html"><tt>iaf_cond_exp</tt></a>  <a href="../cc/iaf_psc_exp_multisynapse.html"><tt>iaf_psc_exp_multisynapse</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/models/iaf_psc_alpha_multisynapse.h
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

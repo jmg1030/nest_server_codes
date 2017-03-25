@@ -1,0 +1,11 @@
+Name: dexp - computes an integer power of 2 and returns the result as double
+ Synopsis: integer dexp -> double
+ Description:
+ This is an interface to the C++ expression
+ double std::ldexp(1.0,int)
+ Examples: -5 dexp frexp -> 0.5 -4
+ Author: Diesmann
+ FirstVersion: 17.5.2005
+ References: Stroustrup 3rd ed p 661
+ SeeAlso: frexp, ldexp, modf
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slimath.cc

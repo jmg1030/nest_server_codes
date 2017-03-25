@@ -1,0 +1,15 @@
+Name: ifail - Check the "fail"-flag of an input stream.
+     Synopsis: istreamhandle ifail -> istreamhandle true
+     -> istreamhandle false
+     Description:
+     This function provides a direct interface to
+     the C++ istream::fail() member function.
+     If true, the next operation on the stream will fail.
+     Parameters:
+     Examples:
+     Bugs:
+     Author: Gewaltig
+     FirstVersion: 21.5.1999
+     Remarks:
+     SeeAlso: ogood, good
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

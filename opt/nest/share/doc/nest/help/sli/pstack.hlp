@@ -1,0 +1,16 @@
+Name: pstack - Display operand stack in syntax form.
+ Synopsis: pstack --> - 
+ Description:
+   Displays operand stack using == on each object.
+ Parameters: -
+ Examples: {1} {2} {3} stack 
+         --> {3}
+             {2}
+             {1}
+ Bugs: 
+ Author: Gewaltig, Diesmann
+ FirstVersion: ???
+ Remarks: Commented Hehl April 20, 1999
+  compare RedBook 2nd ed. page 465
+ SeeAlso: stack, typestack, =, ==
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

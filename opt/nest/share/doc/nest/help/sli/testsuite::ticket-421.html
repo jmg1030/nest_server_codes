@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: testsuite::ticket-421</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: testsuite::ticket-421</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> testsuite::ticket-421 - Minimal test against missing variable initializations
+
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> (ticket-421) run -> NEST exits if test fails
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+ This test simulates all nodes providing V_m for a short while and
+ checks that V_m remains constant. This is a minimal test against
+ missing variable initializations, cf ticket #421.
+ 
+</pre></td></tr><tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre>
+   - Passing this test does not mean that all variables are properly initialized. It may just catch some cases bad cases.
+   - Simulator response to initialization errors is stochastic, so if variables are not initialized properly, this test may
+     fail in some runs and not in others.
+   - Neuron models that do not initialize V_m to steady state, must be added to the exclude_models list below!
+   - If this test fails, please see installcheck.log for which model the test failed.
+     The check if that model really initializes the membrane potential V_m to the steady-state value in absence of any input. If not, add the model to the exclude_models list below.
+
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Hans Ekkehard Plesser, 2010-05-05 
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/regressiontests/ticket-421.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

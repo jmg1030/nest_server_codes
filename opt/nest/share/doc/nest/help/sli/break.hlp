@@ -1,0 +1,3 @@
+Name: break - interrupt the execution of a procedure for inspection
+SeeAlso: continue
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/debug.sli

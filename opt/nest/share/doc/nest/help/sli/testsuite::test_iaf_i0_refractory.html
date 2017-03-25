@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: testsuite::test_iaf_i0_refractory</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: testsuite::test_iaf_i0_refractory</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> testsuite::test_iaf_i0_refractory - sli script for test of iaf_neuron internal DC current
+
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> (test_iaf_i0_refractory) run -> compare cout with comments in file
+
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+
+ test_iaf_i0_refractory.sli is a test of a specific feature of the
+ iaf_neuron model. It is tested whether the voltage traces of simulations
+ carried out at different resolutions (computation step sizes) are well
+ aligned and identical when the neuron recovers from refractoriness.
+
+ In grid based simulation a prerequisite is that the spike is reported at
+ a grid position shared by all the resolutions compared.
+
+ Here, we compare resolutions 0.1, 0.2, 0.5, and 1.0 ms. Therefore, the 
+ internal DC current is adjusted such (1450.0 pA) that the spike is 
+ reported at time 3.0 ms, corresponding to computation step 30, 15, 6, 
+ and 3, respectively.
+
+ The results are consistent with those of iaf_neuron_ps capable of
+ handling off-grid spike timing when the interpolation order is set to
+ 0.
+
+ The expected output is documented and briefly commented at the end of 
+ the script.
+
+ The file is an extended version of test_iaf_i0.sli .
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre>  July 2004, Diesmann
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/iaf_neuron.html"><tt>iaf_neuron</tt></a>  <a href="../sli/testsuite::test_iaf_i0.html"><tt>testsuite::test_iaf_i0</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_iaf_i0_refractory.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

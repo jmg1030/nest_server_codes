@@ -1,0 +1,12 @@
+Name: Directory - Return current working directory
+ Synopsis: Directory -> string
+ Description: Returns name of current working directory. This is where all ls, filestream etc.
+ operations are done per default.
+ Parameters: string : Name of current working directory
+ Examples: Directory = -> /home/MyAccount/SNiFF/synod2
+ Bugs: -
+ Author: Hehl
+ FirstVersion: Oct 12th 1999
+ Remarks:
+ SeeAlso: FileNames, SetDirectory, MakeDirectory, RemoveDirectory, cd, ls
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/filesystem.cc

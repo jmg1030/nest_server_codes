@@ -1,0 +1,21 @@
+Name: GetGlobalChildren - Return IDs of all immediate child nodes of a subnet
+         that fulfill the conditions given in the dictionary, or all nodes if no 
+	 dictionary given.
+   Synopsis:
+   gid [<<dict>>]  GetGlobalChildren -> [gid1 ... gidn]
+
+   Parameters:
+   gid     - id of a subnet
+   <<dict>> - Dictionary of selection properties	
+   Returns:
+   [gid..] - Array with the global ids of all child nodes.
+
+   Description:
+   This function returns the ids of all children of a subnet in increasing order  
+   of gid. If a dictionary is provided, only those nodes which fulfill the given 
+   criteria are returned.
+
+   Author: Marc-Oliver Gewaltig, Abigail Morrison
+
+   SeeAlso: GetLocalChildren, GetGlobalNodes, GetGlobalLeaves
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/nest-init.sli

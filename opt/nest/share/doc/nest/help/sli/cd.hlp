@@ -1,0 +1,14 @@
+Name: cd - Change working directory
+ Synopsis: string cd -> -
+ Description: Changes the working directory to the given argument,
+              e.g. the value of '.' in the UNIX world.
+ Parameters: string : The new working directory.
+             boolean: A flag if operation succeded.
+ Examples: (..) cd  -> Flip to parent directory.
+ Diagnostics: Raises /UnknownDirectory, if SetDirectory fails. 
+ Bugs: -
+ Author: Hehl
+ FirstVersion: Oct 12th 1999
+ Remarks: This is a wrapper to SetDirectory
+ SeeAlso: FileNames, Directory, SetDirectory, MakeDirectory, RemoveDirectory, ls
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/filesystem.sli

@@ -1,0 +1,17 @@
+Name: Sign - returns the sign of its argument
+Synopsis:
+ integer Sign -1,0, or 1
+ double  Sign -1,0, or 1
+Parameters:
+ The return value is always an integer
+Description:
+ The C++ standard library does not define a sign function because
+ there is no general agreement on the return value for 0. The function
+ Sign implements the decision made for Mathematica: if the argument is
+ 0, Sign returns 0.
+Author: Diesmann
+FirstVersion: 2007.11.28
+References:
+   [1] The Mathematica Book "Sign"
+SeeAlso: UnitStep, abs
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

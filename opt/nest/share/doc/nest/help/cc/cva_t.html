@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: cva_t</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: cva_t</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> cva_t - Converts a type trie to an equivalent array
+
+</pre></td></tr>   <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> trie cva_t -> /name array
+
+</pre></td></tr>   <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+   cva_t maps the tree structure of the trie-object to an array.
+   The first return value is the name of the trie object.
+   The second value is an array, representing the trie.
+
+   The layout of a trie node is represented as:
+   [/type [next] [alt]] for non-leaf nodes and
+   [object]            for leaf nodes.
+
+   /type is  a literal, representing the expected type.
+   [next] is an array, representig the next parameter levels.
+   [alt] is an array, representig parameter alternatives
+         at the current level.
+
+   This definitions recursively define the type-trie.
+
+</pre></td></tr>   <tr><td valign="top"><b>Examples:</b></td><td valign="top"><pre>
+   /pop load cva_t -> /pop [/anytype [-pop-]]
+
+</pre></td></tr>   <tr><td valign="top"><b>Diagnostics:</b></td><td valign="top"><pre>
+   This operation is rather low level and does not raise
+   errors
+</pre></td></tr>   <tr><td valign="top"><b>Bugs:</b></td><td valign="top"><pre>
+
+</pre></td></tr>   <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre>
+   Marc-Oliver Gewaltig
+
+</pre></td></tr>   <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre>
+   May 20 1999
+
+</pre></td></tr>   <tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre>
+   cva_t is the inverse function to cvt_a.
+   If cva_t is applied to the result of cvt_a, it yields
+   the original argument:
+   aTrie cva_t cvt_a -> aTrie
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/cvt_a.html"><tt>cvt_a</tt></a>  <a href="../cc/trie.html"><tt>trie</tt></a>  <a href="../cc/addtotrie.html"><tt>addtotrie</tt></a>  <a href="../cc/type.html"><tt>type</tt></a>  <a href="../sli/cva.html"><tt>cva</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slitypecheck.cc
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

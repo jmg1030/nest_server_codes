@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: testsuite::test_spike_generator</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: testsuite::test_spike_generator</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> testsuite::test_spike_generator - sli script to test spike_generator device
+
+</pre></td></tr>   <tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> (test_spike_generator) run
+
+</pre></td></tr>   <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+   test_spike_generator checks the spike_generator device and its
+   consistency with the nest simulation kernel.
+
+   /start specifies the earliest possible time stamp of a spike event to
+   be emitted. /stop specifies the earliest time stamp of a potential
+   spike event that is not emitted.
+ 
+   spike_generator is a device emitting spike events restricted to the
+   time grid spanned by the computation step size h. Nevertheless, the
+   time stamps of the spike events to be emitted are specified by device
+   property /spike_times as double floats in milliseconds (ms). The
+   spike_generator automatically assigns the appropriate time stamps on
+   the simulation grid. For an arbitrary spike time s this is t=i*h with
+   s in the interval (t-h, t], the corresponding event with time stamp t
+   is emitted in the simulation step t-h -> t. See test_iaf_i0_refractory
+   for consistency with spike generation in integrate-and-fire type neuron
+   models and test_iaf_dc_aligned_stop.sli for consistency with the
+   generation of grid based dc currents.
+
+   A a consequence of the restriction of spike events to the simulation
+   grid, multiple spike events with identical time stamps may be emitted.
+
+   The results at different computation step sizes (resolutions) require
+   some further discussion. Let us assume that /start and /stop are at
+   joined grid positions of all resolutions tested. If all spike events
+   are specified on joined grid positions, the simulation results are
+   inependent of the computation step size.  However, if spikes occur on
+   non-joined grid positions, spike times are shifted to the appropriate
+   position on the current grid and simulation results will differ. Also,
+   the spike count cannot be preserved because spikes at the end of the
+   interval may be shifted to grid position /stop which is not a valid
+   time stamp of a spike event anymore.
+
+   Note that the number of emitted spike events can always be made 
+   independent of the computation step size by setting /stop to an
+   appropriately late joined grid position.
+
+   The usage of values for /start and /stop that are not simultaneous
+   grid positions of the computation step sizes to be used should be
+   avoided because the set of spike events delivered in the simulation
+   will vary in complex ways.
+
+   The expected output is documented at the end of the script.
+
+</pre></td></tr>   <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> July 2004
+</pre></td></tr>   <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Diesmann
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/spike_generator.html"><tt>spike_generator</tt></a>  <a href="../sli/testsuite::test_iaf_i0_refractory.html"><tt>testsuite::test_iaf_i0_refractory</tt></a>  <a href="../sli/testsuite::test_iaf_dc_aligned_stop.html"><tt>testsuite::test_iaf_dc_aligned_stop</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_spike_generator.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

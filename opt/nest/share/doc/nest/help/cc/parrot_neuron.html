@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: parrot_neuron</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: parrot_neuron</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> parrot_neuron - Neuron that repeats incoming spikes.
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+
+The parrot neuron simply emits one spike for every incoming spike.
+One possible application for this is to create different channels
+for the output of generator devices such as the poisson_generator
+or the mip_generator.
+
+</pre></td></tr><tr><td valign="top"><b>Remarks:</b></td><td valign="top"><pre>
+
+Network-wise the parrot neuron behaves like other neuron models
+regarding connections and communication. While the number of
+outgoing spikes equals that of incoming ones, the weigth of the
+outgoing spikes solely depends on the weigth of outgoing connections.
+
+A Poisson generator that would send multiple spikes during a single
+time step due to a high rate will send single spikes with
+multiple synaptic strength instead, for effiacy reasons.
+This can be realized because of the way devices are implemented
+in the threaded environment. A parrot neuron on the other
+hand always emits single spikes. Hence, in a situation where for
+example a poisson generator with a high firing rate is connected
+to a parrot neuron, the communication cost associated with outgoing
+spikes is much bigger for the latter.
+
+</pre></td></tr><tr><td valign="top"><b>Receives:</b></td><td valign="top"><pre> SpikeEvent
+
+</pre></td></tr><tr><td valign="top"><b>Sends:</b></td><td valign="top"><pre> SpikeEvent
+
+</pre></td></tr><tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre>
+
+No parameters to be set in the status dictionary.
+
+</pre></td></tr><tr><td valign="top"><b>References:</b></td><td valign="top"><pre>
+No references
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre>  May 2006, Reichert, Morrison
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/models/parrot_neuron.h
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

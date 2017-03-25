@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: ht_neuron</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: ht_neuron</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> ht_neuron - Neuron model after Hill & Tononi (2005).
+
+</pre></td></tr>   <tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+   This model neuron implements a slightly modified version of the
+   neuron model described in [1]. The most important properties are:
+
+   - Integrate-and-fire with threshold that is increased on spiking
+     and decays back to an equilibrium value.
+   - No hard reset, but repolarizing potassium current.
+   - AMPA, NMDA, GABA_A, and GABA_B conductance-based synapses with
+     beta-function (difference of two exponentials) time course.
+   - Intrinsic currents I_h (pacemaker), I_T (low-threshold calcium),
+     I_Na(p) (persistent sodium), and I_KNa (depolarization-activated
+     potassium).
+
+   In comparison to the model described in the paper, the following
+   modifications were mare:
+
+   - NMDA conductance is given by g(t) = g_peak * m(V), where
+
+       m(V) = 1 / ( 1 + exp( - ( V - NMDA_Vact ) / NMDA_Sact ) )
+
+     This is an approximation to the NMDA model used in [2].
+
+   - Several apparent typographical errors in the descriptions of
+     the intrinsic currents were fixed, hopefully in a meaningful
+     way.
+
+   I'd like to thank Sean Hill for giving me access to his
+   simulator source code.
+
+   See examples/hilltononi for usage examples.
+
+   Warning:
+   THIS MODEL NEURON HAS NOT BEEN TESTED EXTENSIVELY!
+
+</pre></td></tr>   <tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre>
+   V_m  -  membrane potential
+   spike_duration - duration of re-polarizing potassium current
+   Tau_m - membrane time constant applying to all currents but repolarizing K-current
+           (see [1, p 1677])
+   Tau_spike - membrane time constant applying to repolarizing K-current
+   Theta, Theta_eq, Tau_theta - Threshold, equilibrium value, time constant
+   g_KL, E_K, g_NaL, E_Na - conductances and reversal potentials for K and Na leak currents
+
+   {AMPA,NMDA,GABA_A,GABA_B}_{E_rev,g_peak,Tau_1,Tau_2}
+   - reversal potentials, peak conductances and time constants for synapses
+     (Tau_1: rise time, Tau_2: decay time, Tau_1 < Tau_2)
+
+   NMDA_Sact, NMDA_Vact - Parameters for voltage dependence of NMDA-synapse, see eq. above
+
+   {h,T,NaP,KNa}_{E_rev,g_peak} - reversal potential and peak conductance for intrinsic currents
+
+   receptor_types - dictionary mapping synapse names to ports on neuron model
+   recordables - list of recordable quantities.
+
+</pre></td></tr>   <tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Hans Ekkehard Plesser
+
+</pre></td></tr>   <tr><td valign="top"><b>Sends:</b></td><td valign="top"><pre> SpikeEvent
+
+</pre></td></tr>   <tr><td valign="top"><b>Receives:</b></td><td valign="top"><pre> SpikeEvent, CurrentEvent, DataLoggingRequest
+
+</pre></td></tr>   <tr><td valign="top"><b>FirstVersion:</b></td><td valign="top"><pre> October 2009
+
+</pre></td></tr>   <tr><td valign="top"><b>References:</b></td><td valign="top"><pre>
+   [1] S Hill and G Tononi (2005). J Neurophysiol 93:1671-1698.
+   [2] ED Lumer, GM Edelman, and G Tononi (1997). Cereb Cortex 7:207-227.
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/ht_synapse.html"><tt>ht_synapse</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/models/ht_neuron.h
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

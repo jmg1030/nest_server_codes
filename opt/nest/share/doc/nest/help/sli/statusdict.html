@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: statusdict</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: statusdict</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> statusdict - dictionary with platform dependent status
+information.
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre> 
+The status dictionary contains various platform dependend status
+information. Among others, it contains the following useful things:
+ 
+  argv        arraytype   full list of commandline arguments given to NEST
+  userargs    arraytype   user supplied arguments, usable by scripts
+  interactive booltype    does this NEST session read its commands from an interactive prompt?
+  files       arraytype   list of files to execute, as specified on the commandline
+  prgdatadir  stringtype  path to the installation directory
+  prgdocdir   stringtype  path to the documentation directory
+
+  have_mpi    booltype    this flag is always defined and indicates whether an 
+                          MPI library is available to the NEST system or not. 
+                          The flag does not indicate whether the interpreter  
+                          actually has MPI support.
+  is_mpi      booltype    this flag may not be defined if the interpreter does not
+                          have MPI support. If the value of the flag is true, the 
+                          interpreter has support for parallel computing. 
+  
+View the whole contents of the status dictionary with 'statusdict info'.
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/info.html"><tt>info</tt></a>  <a href="../sli/LocateFileNames.html"><tt>LocateFileNames</tt></a>  <a href="../sli/searchifstream.html"><tt>searchifstream</tt></a>  <a href="../sli/searchfile.html"><tt>searchfile</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

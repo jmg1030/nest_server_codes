@@ -1,0 +1,10 @@
+Name: getc - Read single character from input stream.
+   Synopsis: istream getc -> istream integer
+   Description: getc reads a single character from the
+   supplied input stream. The character is
+   returned as integer. The mapping between
+   characters and its numerical value is
+   determined by the C++ compiler.
+   Diagnostics: Raises BadIOError
+   SeeAlso: gets, getline
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

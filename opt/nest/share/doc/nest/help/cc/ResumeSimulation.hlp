@@ -1,0 +1,3 @@
+Name: ResumeSimulation - resume an interrupted simulation
+  SeeAlso: Simulate
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/nestmodule.cpp

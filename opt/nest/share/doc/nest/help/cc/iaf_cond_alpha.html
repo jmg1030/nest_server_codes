@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: iaf_cond_alpha</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: iaf_cond_alpha</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> iaf_cond_alpha - Simple conductance based leaky integrate-and-fire neuron model.
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+iaf_cond_alpha is an implementation of a spiking neuron using IAF dynamics with
+conductance-based synapses. Incoming spike events induce a post-synaptic change
+of conductance modelled by an alpha function. The alpha function
+is normalised such that an event of weight 1.0 results in a peak current of 1 nS
+at t = tau_syn.
+
+</pre></td></tr><tr><td valign="top"><b>Parameters:</b></td><td valign="top"><pre>
+The following parameters can be set in the status dictionary.
+
+V_m        double - Membrane potential in mV
+E_L        double - Leak reversal potential in mV.
+C_m        double - Capacity of the membrane in pF
+t_ref      double - Duration of refractory period in ms.
+V_th       double - Spike threshold in mV.
+V_reset    double - Reset potential of the membrane in mV.
+E_ex       double - Excitatory reversal potential in mV.
+E_in       double - Inhibitory reversal potential in mV.
+g_L        double - Leak conductance in nS;
+tau_syn_ex double - Rise time of the excitatory synaptic alpha function in ms.
+tau_syn_in double - Rise time of the inhibitory synaptic alpha function in ms.
+I_e        double - Constant input current in pA.
+
+</pre></td></tr><tr><td valign="top"><b>Sends:</b></td><td valign="top"><pre> SpikeEvent
+
+</pre></td></tr><tr><td valign="top"><b>Receives:</b></td><td valign="top"><pre> SpikeEvent, CurrentEvent, DataLoggingRequest
+
+</pre></td></tr><tr><td valign="top"><b>References:</b></td><td valign="top"><pre>
+
+Meffin, H., Burkitt, A. N., & Grayden, D. B. (2004). An analytical
+model for the large, fluctuating synaptic conductance state typical of
+neocortical neurons in vivo. J.  Comput. Neurosci., 16, 159-175.
+
+Bernander, O ., Douglas, R. J., Martin, K. A. C., & Koch, C. (1991).
+Synaptic background activity influences spatiotemporal integration in
+single pyramidal cells.  Proc. Natl. Acad. Sci. USA, 88(24),
+11569-11573.
+
+Kuhn, Aertsen, Rotter (2004) Neuronal Integration of Synaptic Input in
+the Fluctuation- Driven Regime. Jneurosci 24(10) 2345-2356
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre> Schrader, Plesser
+
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../cc/iaf_cond_exp.html"><tt>iaf_cond_exp</tt></a>  <a href="../cc/iaf_cond_alpha_mc.html"><tt>iaf_cond_alpha_mc</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/models/iaf_cond_alpha.h
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

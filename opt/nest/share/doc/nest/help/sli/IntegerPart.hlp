@@ -1,0 +1,13 @@
+Name: IntegerPart - Return integer part of the argument.
+Synopsis: double IntegerPart -> integerpart
+Description:
+     In effect sets all digits to the right of the decimal point to
+     zero. The sign is preserved. The output value is of type integer.
+Parameters:
+     The input value must be of type double,
+     the output value is of type double.
+Examples:
+     -2.3 IntegerPart -> -2.0
+SeeAlso: FractionalPart
+
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

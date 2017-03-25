@@ -1,0 +1,5 @@
+Name: IntegerQ - returns true if top object is an integer (int)
+Synopsis: int    IntegerQ -> true
+          any    IntegerQ -> false
+SeeAlso: NumberQ, DoubleQ, LiteralQ, ArrayQ, StringQ
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

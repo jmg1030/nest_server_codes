@@ -1,0 +1,8 @@
+Name: ostrstream - Create a string-stream object.
+  Synopsis:
+  ostrstream -> ostreamhandle true
+  -> false
+  Description:
+  Obsolete, use osstream instead.
+  SeeAlso: str, osstream
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

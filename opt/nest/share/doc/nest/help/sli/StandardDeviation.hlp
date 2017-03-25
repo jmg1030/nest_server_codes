@@ -1,0 +1,18 @@
+Name: StandardDeviation - returns the standard deviation of the elements of an array
+Synopsis:
+ array StandardDeviation -> double, standard deviation
+Parameters:
+ array
+Description:
+ The function is implemented in SLI using Variance
+Examples:
+ [8 4 3 6 9 5] StandardDeviation --> 2.3166
+Remarks:
+ The Mathematica version is more general.
+ Replaces arr::SDev in future versions.
+Author: Diesmann
+FirstVersion: 2009.2.22
+References:
+   [1] The Mathematica Book "StandardDeviation"
+SeeAlso: Max, Sort, Total, Variance
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

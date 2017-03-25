@@ -1,0 +1,11 @@
+Name: testsuite::test_sort - sli script to test if sorting works
+
+   Synopsis: (test_sort) run
+
+   Description:
+   This test generates a list of descending doubles, sorts them and checks if
+   it is equal to the ascending list.
+
+   FirstVersion: July 2007
+   Author: Jochen Martin Eppler
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_sort.sli

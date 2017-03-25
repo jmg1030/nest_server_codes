@@ -1,0 +1,3 @@
+Name: flush - Force the buffer of a stream to be flushed.
+  Synopsis: ostream flush -> ostream
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

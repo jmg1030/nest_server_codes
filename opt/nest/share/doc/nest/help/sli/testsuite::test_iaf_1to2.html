@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>NEST Command Index: testsuite::test_iaf_1to2</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #339;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #339;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      padding: 15px 0 0 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    table.headerfooter {
+      margin: 20px 0 20px 0;
+      background-color: #eee;
+      width: 100%;
+      height: 30px;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body bgcolor="white" fgcolor="black">
+<h1>Command: testsuite::test_iaf_1to2</h1>
+ 
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+
+<p>
+<table>
+<tr><td valign="top"><b>Name:</b></td><td valign="top"><pre> testsuite::test_iaf_1to2 - sli script for test of iaf_neuron spike interaction 
+
+</pre></td></tr><tr><td valign="top"><b>Synopsis:</b></td><td valign="top"><pre> (test_iaf_1to2) run -> compare response with reference data
+
+</pre></td></tr><tr><td valign="top"><b>Description:</b></td><td valign="top"><pre>
+
+ test_iaf_1to2 checks the spike interaction of two iaf_neuron model
+ neurons.
+
+ In order to obtain identical results for different computation step
+ sizes h, the SLI script needs to be independent of h.  This is
+ achieved by specifying all time parameters in milliseconds (ms). In
+ particular the time of spike emission and the synaptic delay need to
+ be integer multiples of the computation step sizes to be
+ tested. test_iaf_dc_aligned_delay demonstrates the strategy for the
+ case of DC current input.
+
+ A DC current in the pre-synaptic neuron is adjusted to cause a spike
+ at a grid position (t=3.0 ms) joined by all computation step sizes to
+ be tested.
+ 
+ Note that in a neuron model where synaptic events are modeled by a
+ truncated exponential the effect of the incoming spike would be
+ visible at the time of impact (here, t=4.0 ms). This is because the
+ initial condition for the post-synaptic potential (PSP) has a
+ non-zero voltage component. For PSPs with finite rise time the
+ situation is different. In this case the voltage component of the
+ initial condition is zero (see documentation of
+ test_iaf_psp). Therefore, at the time of impact the PSP is only
+ visible in other components of the state vector.
+
+ The expected output is documented and briefly commented at the end of
+ the script.
+
+</pre></td></tr><tr><td valign="top"><b>Author:</b></td><td valign="top"><pre>  July 2004, Diesmann
+<tr><td valign="top"><b>SeeAlso:</b></td><td valign="top"><a href="../sli/testsuite::test_iaf.html"><tt>testsuite::test_iaf</tt></a>  <a href="../sli/testsuite::test_iaf_psp.html"><tt>testsuite::test_iaf_psp</tt></a>  <a href="../sli/testsuite::test_iaf_dc_aligned_delay.html"><tt>testsuite::test_iaf_dc_aligned_delay</tt></a>  </td></tr>
+</pre></td></tr> <tr><td valign="top"><b>Source:</b></td><td valign="top"><pre> /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_iaf_1to2.sli
+</pre></td></tr></table>
+</p>
+
+<table class="headerfooter">
+  <tr>
+    <td width="30%" align=center><a href="../../index.html">NEST HelpDesk</a></td>
+    <td width="30%" align=center><a href="../helpindex.html">Command Index</a></td>
+    <td width="30%" align=center><a href="../../quickref.html">NEST Quick Reference</a></td>
+  </tr>
+</table>
+<p style="text-align:center">
+  &copy; 2004 <a href="http://www.nest-initiative.org">The NEST Initiative</a>
+</p>
+</body>
+</html>

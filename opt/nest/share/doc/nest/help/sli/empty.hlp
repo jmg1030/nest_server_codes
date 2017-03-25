@@ -1,0 +1,9 @@
+Name: empty - Tests if a string or array is empty.
+Synopsis: array empty -> array  bool
+          string empty-> string bool
+          dict empty -> dict bool
+Description: empty returns true if the supplied string/array is
+of length 0, or the supplied dict has no entries.
+Examples: (hello) empty -> (hello) false
+SeeAlso: length, size
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/typeinit.sli

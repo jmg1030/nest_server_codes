@@ -1,0 +1,10 @@
+Name: good - check good status of a stream
+ Synopsis: streamhandle good -> streamhandle true
+                             -> streamhandle false
+ Description:
+    This function provides a direct interface to
+    the C++ stream::good() member function. 
+ Author: Diesmann
+ FirstVersion: 26.3.1999
+ SeeAlso: igood, ogood
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/typeinit.sli

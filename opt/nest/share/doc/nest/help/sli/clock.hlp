@@ -1,0 +1,9 @@
+Name: clock - returns realtime 
+ Synopsis:  clock -> double
+ Description: 
+ Same as realtime, for backward compatibilty only.
+
+ Author: Hans Ekkehard Plesser
+ FirstVersion: 2003-07-29
+ SeeAlso: realtime
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

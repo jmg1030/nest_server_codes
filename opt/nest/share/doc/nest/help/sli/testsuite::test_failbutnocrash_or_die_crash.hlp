@@ -1,0 +1,8 @@
+Name: testsuite::test_failbutnocrash_or_die_crash - sli script to test the failbutnocrash_or_die_crash function
+
+   Synopsis: (test_failbutnocrash_or_die_crash) run
+
+   FirstVersion: 2014-11-12
+
+   Author: Diesmann, Plesser
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/selftests/test_failbutnocrash_or_die_crash.sli

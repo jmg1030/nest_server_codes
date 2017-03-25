@@ -1,0 +1,43 @@
+Name: parrot_neuron_ps - Neuron that repeats incoming spikes handling
+precise spike times.
+
+Description:
+  The parrot neuron simply emits one spike for every incoming spike.
+  One possible application for this is to create different channels
+  for the output of generator devices such as the poisson_generator
+  or the mip_generator.
+
+Remarks:
+  Network-wise the parrot neuron behaves like other neuron models
+  regarding connections and communication. While the number of
+  outgoing spikes equals that of incoming ones, the weigth of the
+  outgoing spikes solely depends on the weigth of outgoing connections.
+
+  A Poisson generator that would send multiple spikes during a single
+  time step due to a high rate will send single spikes with
+  multiple synaptic strength instead, for effiacy reasons.
+  This can be realized because of the way devices are implemented
+  in the threaded environment. A parrot neuron on the other
+  hand always emits single spikes. Hence, in a situation where for
+  example a poisson generator with a high firing rate is connected
+  to a parrot neuron, the communication cost associated with outgoing
+  spikes is much bigger for the latter.
+
+  Please note that this node is capable of sending precise spike times
+  to target nodes (on-grid spike time plus offset). If this node is
+  connected to a spike_detector, the property "precise_times" of the
+  spike_detector has to be set to true in order to record the offsets
+  in addition to the on-grid spike times.
+
+Parameters:
+  No parameters to be set in the status dictionary.
+
+References:
+  No references
+
+Sends: SpikeEvent
+
+Receives: SpikeEvent
+
+Author: adapted from parrot_neuron by Kunkel
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/precise/parrot_neuron_ps.h

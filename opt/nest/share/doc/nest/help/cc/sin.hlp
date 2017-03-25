@@ -1,0 +1,12 @@
+Name: sin - Calculate the sine of double number.
+ Synopsis:  double sin -> double
+
+ Description: Alternatives: Function sin_d (undocumented)
+ -> behaviour and synopsis are the same.
+
+ Examples:  1.0 sin -> 0.841471
+
+ Author: Hehl
+ FirstVersion: 8.6.1999
+ SeeAlso: cos
+ Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slimath.cc
