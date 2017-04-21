@@ -1,6 +1,0 @@
-Name: regexdict - dictionary with flags and codes for regular expressions
-Synopsis: -
-Description: This dictionary provides flags and codes signaling 
-    properties of or results from regular expression evaluations.
-SeeAlso: regexec
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/regexp.sli

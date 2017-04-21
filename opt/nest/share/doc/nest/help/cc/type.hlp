@@ -1,4 +1,0 @@
-Name: type - Return the type of an object
-Synopsis: obj type -> /typename
-Examples: 1 type -> /integertype
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slitypecheck.cc

@@ -1,6 +1,0 @@
-Name: GetMax - get maximal element
-Synopsis: array GetMax -> int
-Description: returns the maximum value in an array of ints.
-SeeAlso: GetMin
-Remarks: works only for integer arrays.
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sliarray.cc

@@ -1,8 +1,0 @@
-Name: initialize_module - Initialize module by executing commandstring
-
-Synopsis:
-commandstring initialize_module -> -
-
-Description:
-Executes the command string provided by a module to initialize it.
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/library.sli

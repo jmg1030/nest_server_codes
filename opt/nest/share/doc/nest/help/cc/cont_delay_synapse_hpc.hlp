@@ -1,3 +1,0 @@
-Name: cont_delay_synapse_hpc - Variant of cont_delay_synapse with low memory consumption.
-     SeeAlso: synapsedict, cont_delay_synapse, static_synapse_hpc
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/models/modelsmodule.cpp

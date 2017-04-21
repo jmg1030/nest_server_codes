@@ -1,6 +1,0 @@
-Name: ones - Return a DoubleVector filled with ones.
-Synapsis: n ones -> [. 1. 1. ... .]
-Author: Marc-Oliver Gewaltig
-FirstVersion: Dec. 4 2012
-SeeAlso: zeros, arange
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

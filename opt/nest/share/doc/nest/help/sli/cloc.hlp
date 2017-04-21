@@ -1,3 +1,0 @@
-Name: cloc - Return elapsed interpreter cycles since clic was called.
- SeeAlso: clic, tic, toc
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

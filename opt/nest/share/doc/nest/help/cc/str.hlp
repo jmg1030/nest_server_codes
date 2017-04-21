@@ -1,5 +1,0 @@
-Name: str - Retrieve a string from a string-stream.
-  Synopsis: osstream str -> string
-  Description: Retrieves the string data from a string-stream object
-  SeeAlso: osstream
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

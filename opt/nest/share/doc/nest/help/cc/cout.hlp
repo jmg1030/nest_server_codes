@@ -1,6 +1,0 @@
-Name: cout - Standard output stream
-    Synopsis: cout -> ostream
-    Description: cout corresponds to the C++ object with the
-    same name.
-    SeeAlso: cin, cerr
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

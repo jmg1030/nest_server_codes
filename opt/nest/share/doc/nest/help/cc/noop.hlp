@@ -1,3 +1,0 @@
-Name: noop - no operation function
-Description: This function does nothing. It is used for benchmark purposes.
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc

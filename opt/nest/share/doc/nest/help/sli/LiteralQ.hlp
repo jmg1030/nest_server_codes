@@ -1,3 +1,0 @@
-Name: LiteralQ - returns true if top object is a literal
-SeeAlso: NumberQ, ArrayQ, StringQ
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/mathematica.sli

@@ -1,8 +1,0 @@
-Name: testsuite::test_passorfailbutnocrash_or_die - sli script to test the crash_or_die function
-
-   Synopsis: (test_passorfailbutnocrash_or_die) run
-
-   FirstVersion: 2011-11-12
-
-   Author: Diesmann, Plesser
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/selftests/test_passorfailbutnocrash_or_die.sli

@@ -1,5 +1,0 @@
-Name: ReadDouble - Read a double number from an input stream.
-     Synopsis: istream ReadDouble -> istream double true
-     -> istream false
-     SeeAlso: ReadInt, ReadWord
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/sli_io.cc

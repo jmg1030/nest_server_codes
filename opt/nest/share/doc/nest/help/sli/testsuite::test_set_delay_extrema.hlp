@@ -1,9 +1,0 @@
-Name: testsuite::test_set_delay_extrema - sli script to test if min_ and max_delay
-   can be set by the user correctly
-
-   Synopsis: (test_set_delay_extrema) run -> compare output with comments in file
-
-   FirstVersion: July 2004
-   Author: Diesmann
-   SeeAlso: testsuite::test_iaf_1to2, testsuite::test_iaf_psp, testsuite::test_iaf_dc_aligned_delay
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/testsuite/unittests/test_set_delay_extrema.sli

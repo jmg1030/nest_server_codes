@@ -1,3 +1,0 @@
-Name: clear - Clear the entire stack.
-SeeAlso: pop, npop
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slistack.cc

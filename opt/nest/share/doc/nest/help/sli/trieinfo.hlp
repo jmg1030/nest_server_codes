@@ -1,3 +1,0 @@
-Name: trieinfo - print the function variants of a type-trie.
-Synopsis: ostream trieinfo -> -
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/typeinit.sli

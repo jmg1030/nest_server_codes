@@ -1,6 +1,0 @@
-Name: cst - Convert string to array of tokens
-Synopsis: string cst -> array
-Examples: (hello) cst -> [hello]
-Author: docu by Sirko Straube
-SeeAlso: cv1d, cv2d, cva, cvd_s, cvi_s, cvlit, cvn, cvs, cvt_a
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/lib/sli/sli-init.sli

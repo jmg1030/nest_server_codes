@@ -1,7 +1,0 @@
-Name: exec - execute an object
-Synopsis: any exec -> -
-Description: exec tries to execute the object by moving it to
-the execution stack.
-Examples: {1 2 add} exec -> 3
-SeeAlso: cvx
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slicontrol.cc

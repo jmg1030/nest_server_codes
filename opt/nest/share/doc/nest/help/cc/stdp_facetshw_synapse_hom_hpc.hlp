@@ -1,4 +1,0 @@
-Name: stdp_facetshw_synapse_hom_hpc - Variant of stdp_facetshw_synapse_hom with low memory
-     consumption.
-     SeeAlso: synapsedict, stdp_facetshw_synapse_hom, static_synapse_hpc
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/models/modelsmodule.cpp

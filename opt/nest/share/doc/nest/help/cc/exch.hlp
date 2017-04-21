@@ -1,6 +1,0 @@
-Name: exch - Exchange the order of the first two stack objects.
-Synopsis: obj1 obj2 exch -> obj2 obj1
-Diagnostics: Raises StackUnderflow error if there are less than two objects on
-  the stack.
-SeeAlso: roll, rollu, rolld, rot
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slistack.cc

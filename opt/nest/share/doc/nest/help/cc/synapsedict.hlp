@@ -1,7 +1,0 @@
-Name: synapsedict - Dictionary containing all synapse models.
-     Description:
-     'synapsedict info' shows the contents of the dictionary
-     FirstVersion: October 2005
-     Author: Jochen Martin Eppler
-     SeeAlso: info
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/nestkernel/network.h

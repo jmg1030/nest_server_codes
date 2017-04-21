@@ -1,6 +1,0 @@
-Name: shrink - Reduce the capacity of an array or string to its minimum.
-Synopsis: array shrink -> array bool
-Description: Shrink reduces the capacity of an array or string to its minimum.
-The boolean return value indicates whether a re-sizing of the array was done.
-SeeAlso: capacity, reserve, allocations
- Source: /home/ubuntu/nest_server_codes/nest-2.8.0/sli/slidata.cc
